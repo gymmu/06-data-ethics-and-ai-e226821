@@ -5,6 +5,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
 
 \usepackage[
     backend=biber,
@@ -22,23 +25,63 @@
     eprint=false]{biblatex}
 \addbibresource{../references/bibliography.bib}
 
-\title{Notizen zum Projekt Data Ethics}
-\author{Name des Autors}
+\title{Ist es ethisch korrekt,wenn man in der Öffentlichkeit Siri eingeschaltet hat?}
+\author{Ann-Cathrine Böller}
 \date{\today}
 
 \begin{document}
 \maketitle
 
-\abstract{
-    Dieses Dokument ist eine Sammlung von Notizen zu dem Projekt. Die Struktur innerhalb des
-    Projektes ist gleich ausgelegt wie in der Hauptarbeit, somit kann hier einfach geschrieben
-    werden, und die Teile die man verwenden möchte, kann man direkt in die Hauptdatei ziehen.
-}
+\abstract{ 
+    Siri ist ein von Apple erfundener Sprachassistent. Sie kann über das Internet per Sprachsteuerung auf bestimmte Informationen und Apple-Dienste zugreifen. Siri antwortet mit einer weiblichen Stimme und führt den Befehl aus. Der Umgang mit Datenschutzfragen im Zusammenhang mit der Verwendung von Siri wurde häufig thematisiert und kritisiert. Es gibt Zeifel daran, ob Siri nur Gespräche aufzeichnet, wenn sie gezielt vom Nutzer aktiviert wird. Ebenso wurde die Auswertung von Gesprächsmitschnitten, die Nutzerprofile identifizierbar machen, in Frage gestellt. In dieser Leitfrage geht es darum, ob es ethisch korrekt ist, wenn man Siri in der Öffentlichkeit eingeschaltet hat, da es die ganze Zeit im Hintergrund läuft.
+    }
+
+     
 
 \tableofcontents
 
-\input{section_ai.tex}
+\section{Was ist KI?}
+Unter künstlicher Intelligenz wird die Fähigkeit einer Maschine, menschliche Fähigkeiten wie logisches Denken, Kreativität und Lernen zu imitieren, verstanden.
+Der Computer empfängt Daten, verarbeitet sie und reagiert. KI-Systeme sind ausserdem auch in der Lage, ihr Handeln anzupassen. Dafür analysieren sie die Folgen von früheren Aktionen.
 
-\printbibliography
+\section{Wie wird eine KI trainiert?}
+Das KI-Training ist ein dreistufiger Prozess. Der erste Schritt ist das Training. Dort wird ein Computeralgorithmus mit Daten gefüttert, um Vorhersagen zu erstellen und deren Genauigkeit zu bewerten. Der zweite Schritt wird als Validierung bezeichnet. Dort wird bewertet, wie gut das trainierte Modell bei zuvor ungesehenden Daten abschneidet. Im letzten Schritt wird getestet, ob das endgültige Modell mit den neuen Daten genaue Vorhersagen trifft.
+
+Insgesamt ist also zu sagen, dass der erste Schritt darin besteht, Daten in ein Computersystem einzuspeisen. So kann das System Vorhersagen treffen und die Genauigkeit bei jedem neuen Zyklus bewerten. Die KI lernt, Muster und Zusammenhänge in den Daten zu erkennen. Durch wiederholtes Testen werden diese anfänglichen Vermutungen immer genauer, bis sie zu einem Punkt kommen, an dem es nicht mehr viel Raum für Verbesserungen gibt. Zum Erreichen dieses Stadiums, werden riesige Mengen an Daten in das Modell eingespeist. Die Parameter spielen bei dem Erreichen des Entwicklungsstandes eine entscheidende Rolle. Der Parameter ist eine Konfigurationsvariable, die im KI-Modell intern vorhanden ist und deren Wert aus Daten durch einen Algorithmus geschätzt wird. Sie werden für die Vorhersagen benötigt. Ihre Werte definieren die Fähigkeit des Modells, eine Aufgabe zu lösen. Parameter werden aus Daten gelernt oder geschätzt. Die Zahl der verwendeten Parameter beeinflusst die benötigte Geschwindigkeit, Rechenaufwand und die Genauigkeit der Resultate. 
+
+
+Beim zweiten Schritt wird bewertet, wie die Modelle bei Daten, die das Modell noch nicht gesehen hat, abschneiden. So kann man feststellen, ob das Training fortgesetzt oder irgendwie verändert werden muss. 
+Beim letzten Schritt wird getestet, ob das Modell mit den Daten genaue Vorhersagen trifft. Wenn nicht, kehrt man zum Trainingsprozess zurück und wiederholt ihn, bis die Genauigkeit stimmt.
+
+
+\section{Wie funktioniert Siri}
+Siri funktioniert als Stimmerkennungssystem, das auf fest verdrahteten Befehlen basiert. Es kann auf Fragen und Befehle reagieren, die in einem mehr oder weniger normalen Satz ausgedrückt werden. Die Spracheingabe wird zunächst lokal auf dem Gerät verarbeitet und dann an die Server von Apple gesendet. Siri kann bestimmte Befehle wie das Stellen eines Timers oder das Anlegen einer Erinnerung ausführen, ist jedoch nicht in der Lage, allgemeine Fragen zu beantworten. Es handelt sich also um eine fortschrittliche Spracherkennung, die flexibler ist als frühere Systeme, aber dennoch auf festen Sprachmustern basiert.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{siri.jpg}
+    \caption{Siri}
+    \label{fig:siri}
+    \end{figure}
+
+\section{Was hört Siri mit?}
+Siri kann neben dem Drücken eines Knopfes auch mit den Worten "Hey Siri" gestartet werden. Die Spracheingabe ist also dauerhaft eingeschaltet. Damit verbunden ist somit ein Dauer lauschen. Laut Apple wird die Spracheingabe zunächst nur lokal auf dem eigenen Gerät verarbeitet und erst mit den Aktivierungsworten "Hey Siri" an die Server von Apple versendet. Durch verschiedene Töne oder Geräusche kann Siri auch fälschlicherweise ausgelöst werden. Diese Daten werden dann nicht nur durch eine KI verarbeitet, sondern durch Apple Mitarbeiter. Die Mitarbeiter überprüfen, ob Siri fälschlicherweise ausgelöst wurde und ob die Antwort von Siri die Frage des Nutzers angemessen beantwortet hat.
+Es wurde bei vielen verschiedenen Gesprächen mitgehört. Häufig ging es dabei um sehr sensible Daten, wie zum Beispiel Gespräche zwischen Arzt und Patient, Vereinbarungen zu Straftaten, sowie Geschäftsgespräche. Die Missbrauchsgefahr dieser Daten ist entsprechend dem sensiblen Charakter hoch. 
+
+
+\section{Ethische Probleme im Zusammenhang mit Siri}
+Datenschützer kritisieren, ob Daten über die Interaktion der Nutzer mit Siri in grossem Stil für die Weiterentwicklung ausgewertet werden sollen. Werden persönliche Informationen nicht angemessen geschützt, führt das zu gravierenden Datenschutzverletzungen. Wenn personenbezogene oder sensible Informationen in die falschen Hände geraten, sind Identitätsdiebstahl, Betrug oder anderweitiger Datenmissbrauch möglich. Ist Siri in der Öffentlichkeit eingeschaltet, können unbeteiligte Dritte unbewusst mitaufgenommen und deren Daten verarbeitet.
+Für diese Aufnahmen wäre eine Einwilligung erforderlich. Ausserdem müssten diese Personen von der Aufnahme in Kenntnis gesetzt werden.
+
+\section{Was kann der Nutzer tun?}
+Der einzelne Nutzer soll sich bewusst sein, dass Apple immer noch Daten sammelt und gegebenenfalls auch durch Mitarbeiter von Apple ausgewertet werden können. Vor allem auf beruflichen Handys ist es daher sehr empfehlenswert, Siri komplett zu deaktivieren. Ist es ein Privathandy, so sollte man Apples Datenschutz Einstellungen in Bezug auf Siri ändern und weitere Massnahmen treffen, wie z.B. regelmässiges Löschen von Siri-Daten oder auf die Aktivierung durch Sprachbefehl verzichten. 
+
+
+\section{Fazit}
+Viele Aktivierungen werden fälschlicherweise getätigt. So entstehen Aufnahmen unbeabsichtigt. Apple nutzt die Aufzeichnungen um Siri weiterzuentwickeln und sich damit an den jeweiligen Nutzer anzupassen. Jedoch betont Apple, dass es sich bei den Aufnahmen nur um Aufzeichnungen von wenigen Sekunden handelt. Um Siri zu deaktiveren, muss man sie in den Einstellugen ausschalten.
+Insgesamt gibt es einen vgrossen Diskussionsraum, ob es ethisch korrekt ist, wenn man Siri in der Öffentlichkeit eingeschaltet hat. Durch kleine Aufzeichnungen durch Siri, werden allenfalls unbeteiligte ebenfalls aufgenommen, was zu Unstimmigkeiten führen kann. Durch Siri werden also einige Gebiete des Datenschutzes verletzt.
+
+\input{section_ai.tex}
 
 \end{document}
